@@ -21,4 +21,4 @@ Your users should be able to:
 * Toggle the color scheme between light and dark mode (optional)
 * Download the starter code and go through the README.md file. This will provide further details about the project. The style-guide.md file is where you'll find colors, fonts, etc.
 
-
+Join the Trello board [here](https://trello.com/invite/b/jbIYyqiq/edf805877934a3f3b281a70640e5d590/frontendmentorio-countries-api).
