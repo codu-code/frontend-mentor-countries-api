@@ -4,7 +4,7 @@ A repo for people to collaborate on a frontend mentor challenge - "REST Countrie
 
 Get the challenge assets [here](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
 
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/64abb567-942a-40d3-9a9c-bb704df26b25/deploy-status)](https://app.netlify.com/sites/fem-country-api/deploys)
 
 ## Brief
 Your challenge is to integrate with the REST Countries API to pull country data and display it like in the designs.
