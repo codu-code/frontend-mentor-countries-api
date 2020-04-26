@@ -1,7 +1,38 @@
 // Colors
 $dark-blue: hsl(209, 23%, 22%); // Dark Mode Elements
 $very-dark-blue: hsl(207, 26%, 17%); // Dark Mode Background
-$very-dark-blue: hsl(200, 15%, 8%); // Light Mode Text
+$very-dark-blue-text: hsl(200, 15%, 8%); // Light Mode Text
 $dark-gray: hsl(0, 0%, 52%); // Light Mode Input
 $very-light-gray: hsl(0, 0%, 98%); // Light Mode Background
 $white: hsl(0, 0%, 100%); // Dark Mode Text & Light Mode Elements
+
+// Breakpoints for Mobile First Design
+// Use this to design for screen size greater than 600px
+@mixin small-and-up {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+// Use this to design for screen size greater than 960px
+@mixin medium-and-up {
+    @media only screen and (min-width: 960px) {
+        @content;
+    }
+}
+// Use this to design for screen size greater than 1280px
+@mixin large-and-up {
+    @media only screen and (min-width: 1280px) {
+        @content;
+    }
+}
+// Use this to design for screen size greater than 1920px
+@mixin xlarge-and-up {
+    @media only screen and (min-width: 1920px) {
+        @content;
+    }
+}
+
+// Font Weights
+$light : 300; // Thin
+$medium: 600; // Medium
+$bold: 800; // Bold

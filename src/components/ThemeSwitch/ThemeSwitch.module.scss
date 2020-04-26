@@ -1,0 +1,15 @@
+@import "../../global.styles.scss";
+
+.ThemeSwitch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    p {
+        font-weight: $medium;
+        font-size: .8rem;
+        &:first-child {
+            margin-right: 5px;
+        }
+    }
+}
