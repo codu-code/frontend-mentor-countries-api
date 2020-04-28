@@ -1,0 +1,70 @@
+@import '../../global.styles.scss';
+
+.Dropdown {
+    $height: 3.5rem;
+    position: relative;
+    width: 12.5rem;
+    font-size: 0.85rem;
+    letter-spacing: -0.0005rem;
+    font-weight: $medium;
+    .clickArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $height;
+        width: inherit;
+        cursor: pointer;
+        background: $white;
+        border-radius: $border-radius;
+        padding: 0 1.25rem 0 1.5rem;
+        box-shadow: $element-box-shadow-light;
+    }
+    ul {
+        position: absolute;
+        top: calc(#{$height} + 4px);
+        background: $white;
+        width: inherit;
+        border-radius: $border-radius;
+        display: none;
+        box-shadow: $element-box-shadow-light;
+        &.open {
+            display: flex;
+            flex-direction: column;
+        }
+        li {
+            list-style: none;
+            padding: 0.3rem 1.25rem 0.3rem 1.5rem;
+            cursor: pointer;
+            &:first-child {
+                padding-top: 1rem;
+            }
+            &:last-child {
+                padding-bottom: 1rem;
+            }
+            &:hover,
+            &.selected {
+                background: hsla(0, 0%, 0%, 0.05);
+                transition: background 0.3s;
+            }
+        }
+    }
+}
+
+.dark {
+    color: $white;
+    .clickArea {
+        background-color: $dark-blue;
+        box-shadow: $element-box-shadow-dark;
+    }
+    ul {
+        background-color: $dark-blue;
+        box-shadow: $element-box-shadow-dark;
+        li {
+            &:hover,
+            &.selected {
+                background: hsla(0, 0%, 0%, 0.1);
+                transition: background 0.3s;
+            }
+        }
+    }
+}

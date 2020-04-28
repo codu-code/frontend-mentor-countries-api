@@ -1,6 +1,15 @@
 @import './global.styles.scss';
 
 .App {
-  background: $white;
-  color: $very-dark-blue;
+    min-height: 100vh;
+}
+
+.App.light {
+    background: $very-light-gray;
+    color: $very-dark-blue;
+}
+
+.App.dark {
+    background: $very-dark-blue;
+    color: $white;
 }

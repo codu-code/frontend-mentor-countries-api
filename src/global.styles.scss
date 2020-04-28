@@ -33,6 +33,11 @@ $white: hsl(0, 0%, 100%); // Dark Mode Text & Light Mode Elements
 }
 
 // Font Weights
-$light : 300; // Thin
+$light: 300; // Thin
 $medium: 600; // Medium
 $bold: 800; // Bold
+
+// Borders & Shadows
+$border-radius: 0.3rem;
+$element-box-shadow-light: 0 5px 10px -5px #ccc, 0 -1px 10px -5px #eee;
+$element-box-shadow-dark: 0 5px 10px -5px #222, 0 -1px 10px -5px #222;

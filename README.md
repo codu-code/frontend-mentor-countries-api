@@ -6,6 +6,8 @@ Get the challenge assets [here](https://www.frontendmentor.io/challenges/rest-co
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/64abb567-942a-40d3-9a9c-bb704df26b25/deploy-status)](https://app.netlify.com/sites/fem-country-api/deploys)
 
+[Live Website Link](https://fem-country-api.netlify.app/) 
+
 ## Brief
 Your challenge is to integrate with the REST Countries API to pull country data and display it like in the designs.
 
