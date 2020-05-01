@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { Route } from 'react-router-dom';
 
-import getCountries, { getBorders, getNestedData, searchByName } from './utils';
+import getCountries, { searchByName } from './utils';
 
 import Header from './components/Header/Header';
 import Dropdown from './components/Dropdown/Dropdown.js';
@@ -13,7 +13,6 @@ const App = () => {
     // Set theme to light by default
     const [theme, setTheme] = useState('light');
     const [countries, setCountries] = useState([]);
-    const [borders, setBorders] = useState([]);
     const [region, setRegion] = useState('');
 
     useEffect(() => {
@@ -29,36 +28,41 @@ const App = () => {
     return (
         <div className="App">
             <Header theme={theme} toggleTheme={toggleTheme} />
-
+            <Route
+                exact
+                path="/"
+                component={() => <h1>Country list/grid should go HERE</h1>}
+            />
+            <Route
+                exact
+                path="/:country"
+                component={() => <h1>Country details page should go HERE</h1>}
+            />
             {/* Added for demonstration purposes */}
             <h1>Search By Name</h1>
             Searching for Spain: {searchByName(countries, 'Spain')}
             <h1>Search By Name</h1>
             Searching for foo: {searchByName(countries, 'foo')}
             <h1>Countries</h1>
-            {/* Added for demonstration purposes */}
-            {/* Added for demonstration purposes */}
             <Dropdown
-              buttonText="Filter by Region"
-              list={['Africa', 'America', 'Asia', 'Europe', 'Oceania']}
-              selectedItem={region}
-              onSelect={setRegion}
-              theme={theme}
+                buttonText="Filter by Region"
+                list={['Africa', 'America', 'Asia', 'Europe', 'Oceania']}
+                selectedItem={region}
+                onSelect={setRegion}
+                theme={theme}
             />
             <h1>{region}</h1>
-            {/* Added for demonstration purposes */}
-            {/* Added for demonstration purposes */}
             <ul>
                 {countries.map(country => (
-                  <div style={{ padding: 20 }}>
-                  <Country 
-                    theme={theme} 
-                    flag={country.flag}
-                    name={country.name}
-                    population={country.population}
-                    region={country.region}
-                    capital={country.capital}
-                  />
+                    <div style={{ padding: 20 }}>
+                        <Country
+                            theme={theme}
+                            flag={country.flag}
+                            name={country.name}
+                            population={country.population}
+                            region={country.region}
+                            capital={country.capital}
+                        />
                         {/* <li key={country.alpha3Code}>
                             {country.name} <br />/ native name:{' '}
                             {country.nativeName} <br />/ population:{' '}
@@ -74,8 +78,7 @@ const App = () => {
                     </div>
                 ))}
             </ul>
-            {/* Added for demonstration purposes */}
-
+            {/* Added for demonstration purposes END*/}
         </div>
     );
 };
