@@ -1,0 +1,8 @@
+@import '../../global.styles.scss';
+
+.Grid {
+    display: grid;
+    // grid: repeat(100px, 4) / auto-flow 120px;
+    grid-template-columns: 300px 300px 300px 300px;
+    // grid-template-columns: 1.4fr 1.4fr 1.4fr 1.4fr;
+}
