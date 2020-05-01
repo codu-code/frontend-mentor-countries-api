@@ -9,6 +9,7 @@ const Grid = props => (
     <div className={styles.Grid}>
         {props.countries.map(country => (
             <Country
+                key={country.alpha3Code}
                 theme={props.theme}
                 flag={country.flag}
                 name={country.name}

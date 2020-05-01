@@ -5,7 +5,6 @@ import getCountries, { getBorders, getNestedData, searchByName } from './utils';
 
 import Header from './components/Header/Header';
 import Dropdown from './components/Dropdown/Dropdown.js';
-import Country from './components/Country/Country.js';
 import Grid from './components/Grid/Grid.js';
 
 import './App.scss';
