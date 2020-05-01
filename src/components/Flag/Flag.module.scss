@@ -1,11 +1,19 @@
 @import '../../global.styles.scss';
 
-.Flag {
-    // float: left;
-    // object-fit: cover;
+// .Flag {
+//     // float: left;
+//     background-size: cover;
+//     // width: 350px;
+//     // width: 100%;
+//     // width: auto;
+//     height: 150px;
+//     width: 350px;
+//     // height: auto;
+// }
+
+img {
     background-size: cover;
-    width: 350px;
-    // width: 100%;
+    object-fit: cover;
     height: 150px;
-    // height: auto;
+    width: 350px;
 }
