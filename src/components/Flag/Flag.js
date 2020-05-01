@@ -6,7 +6,7 @@ import styles from "./Flag.module.scss";
 
 function idealAspectRatio({width, height}) {
    const aspectRatio = width / height; 
-   if (aspectRatio >= 1.5 && aspectRatio <= 1.7){
+   if (aspectRatio > 1.5 && aspectRatio <= 1.8){
       return false;
    }
    return true;
@@ -32,7 +32,7 @@ async function getImage(url){
 
 function Flag (props) {
    
-   const flag = props.flag;
+   const altText = `${props.name} flag`;
    const [ratio, setRatio] = useState([]);
 
    useEffect(() => {
@@ -42,10 +42,22 @@ function Flag (props) {
       });
       // stop the component from re-rendering since props.flag does not change 
    },[props.flag]);
-   console.log(idealAspectRatio(ratio));
+
+   
+   const ideal = (idealAspectRatio(ratio));
+   const classNameText = (ideal ? 'standard' : 'resize');
+   console.log(classNameText);
+
    
   
-   return (<img className={styles.standard} src={props.flag} alt={props.name}/>)
+   return (
+     
+      <img 
+         className={ideal ? styles.standard : styles.standard} 
+         src={props.flag} 
+         alt={altText} 
+      />
+   )
 
 }
 

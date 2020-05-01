@@ -7,7 +7,10 @@ import CardBottom from "../CardBottom/CardBottom";
 const Country = props => (
     <div className={`${styles.Country} ${props.theme === "light" ? styles.light : styles.dark}`}>
         
-        <Flag flag={props.flag} />
+        <Flag 
+            flag={props.flag} 
+            name={props.name}
+        />
         {/* <CardBottom
             name={props.name}
             population={props.population}
