@@ -1,5 +1,33 @@
 @import '../../global.styles.scss';
 
-.Flag {
+// .Flag {
+//     // float: left;
+//     background-size: cover;
+//     // width: 350px;
+//     // width: 100%;
+//     // width: auto;
+//     height: 150px;
+//     width: 350px;
+//     // height: auto;
+// }
+
+.standard {
+    // background-size: cover;
     width: 100%;
+    height: 100%;
+    // display: block;
+    // object-fit: cover;
+
+    // width: auto;
+    // justify-self: stretch;
+    // background-size: auto;
+}
+
+.resize {
+    // width: 120%;
+    // height: 90%;
+    object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+    // background-color: red;
 }
