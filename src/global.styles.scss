@@ -41,3 +41,14 @@ $bold: 800; // Bold
 $border-radius: 0.3rem;
 $element-box-shadow-light: 0 5px 10px -5px #ccc, 0 -1px 10px -5px #eee;
 $element-box-shadow-dark: 0 5px 10px -5px #222, 0 -1px 10px -5px #222;
+
+body {
+    box-sizing: border-box;
+    margin: 20px;
+    width: 100%;
+    // height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

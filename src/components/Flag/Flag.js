@@ -45,7 +45,7 @@ function Flag (props) {
 
    
    const ideal = (idealAspectRatio(ratio));
-   const classNameText = (ideal ? 'standard' : 'resize');
+   const classNameText = (ideal ? 'standard' : 'standard');
    console.log(classNameText);
 
    

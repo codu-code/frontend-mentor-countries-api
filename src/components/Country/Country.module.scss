@@ -1,29 +1,42 @@
 @import '../../global.styles.scss';
 
 .Country {
-    // margin: 2em;
-    // width: 80%;
-    // padding: 0;
-    // width: auto;
-    // height: auto;
-    // height: 100%;
-    // width: 300px;
-    // height: auto;
-    // padding-top: 0;
-    // padding-bottom: 20px;
-    // max-width: 100%;
+    display: grid;
     border-radius: $border-radius;
     box-shadow: $element-box-shadow-light;
+    overflow: hidden;
+    cursor: pointer;
 }
-
+img {
+    width: 100%;
+}
+.infoBlock {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+h1 {
+    font-size: 1.1rem;
+}
+ul {
+    list-style-type: none;
+    margin-top: 0.5rem;
+}
+li {
+    font-size: 0.9rem;
+    display: flex;
+}
+strong {
+    font-weight: $medium;
+}
 .light {
     background-color: $white;
     color: $very-dark-blue-text;
 }
 
 .dark {
-    color: $white;
-
     background-color: $dark-blue;
+    color: $white;
     box-shadow: $element-box-shadow-dark;
 }

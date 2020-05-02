@@ -27,7 +27,7 @@ const App = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
     return (
-        <div className="App">
+        <div className={theme === 'light' ? 'App light' : 'App dark'}>
             <Header theme={theme} toggleTheme={toggleTheme} />
 
             {/* Added for demonstration purposes */}
@@ -49,6 +49,7 @@ const App = () => {
             {/* Added for demonstration purposes */}
             {/* Added for demonstration purposes */}
             {/* <ul> */}
+
             <Grid 
               countries={countries}
               theme={theme}
