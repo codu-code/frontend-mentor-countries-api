@@ -15,9 +15,13 @@ const getCountries = () =>{
 
 // check if the user's search result is in the list of countries
 const searchByName = (countries, search) => {
-    const countryNames = countries.map(country => country.name);
-    const found = countryNames.find(name => name === search);
-    return (found ? `found ${search}!` : `No results for ${search} found :(`);
+    const newCountries = countries.filter(country => {
+        return country.name.includes(search);
+    });
+    return newCountries;
+    // const countryNames = countries.map(country => country.name);
+    // const found = countryNames.find(name => name === search);
+    // return (found ? `found ${search}!` : `No results for ${search} found :(`);
 
 }
 

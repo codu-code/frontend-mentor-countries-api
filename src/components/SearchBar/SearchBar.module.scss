@@ -1,0 +1,13 @@
+@import "../../global.styles.scss";
+
+.SearchBar {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    @include small-and-up {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

@@ -1,7 +1,7 @@
 @import "../../global.styles.scss";
 
 .Fwc {
-    box-shadow: 0 5px 10px -5px #ccc;
+    box-shadow: $element-box-shadow-light;
     .Header {
         display: flex;
         justify-content: space-between;
@@ -9,15 +9,13 @@
         width: 90%;
         margin: 0 auto;
         height: 80px;
+        max-width: 960px;
         & > p {
             font-weight: $bold;
             font-size: .9rem;
             @include large-and-up {
                 font-size: 1.1rem;
             }
-        }
-        @include large-and-up {
-            width: 75%;
         }
     }
 }
@@ -29,5 +27,6 @@
 
 .dark {
     background-color: $dark-blue;
+    box-shadow: $element-box-shadow-light;
     color: $white;
 }
