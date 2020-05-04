@@ -10,7 +10,7 @@ import styles from './Dropdown.module.scss';
   selectedItem - currently selected item, used for styling background of the item
   theme - 'dark'/'light', defaults to light
 */
-const Dropdown = ({ list, onSelect, selectedItem, theme }) => {
+const Dropdown = ({ buttonTxt, list, onSelect, selectedItem, theme }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleSelect = item => {
         toggleDropdown();
@@ -27,7 +27,7 @@ const Dropdown = ({ list, onSelect, selectedItem, theme }) => {
             `}
         >
             <div className={styles.clickArea} onClick={toggleDropdown}>
-                <span>Filter by Region</span>
+                <span>{buttonTxt}</span>
                 {isOpen ? (
                     <i className="fas fa-angle-up" />
                 ) : (

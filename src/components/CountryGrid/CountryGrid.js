@@ -15,18 +15,6 @@ const CountryGrid = props => {
                             region={country.region}
                             capital={country.capital}
                         />
-                        {/* <li key={country.alpha3Code}>
-                            {country.name} <br />/ native name:{' '}
-                            {country.nativeName} <br />/ population:{' '}
-                            {country.population} <br />/ region:{' '}
-                            {country.region} <br />/ subregion:{' '}
-                            {country.subregion} <br />/ capital:{' '}
-                            {country.capital} <br />/ top level domain:{' '}
-                            {country.topLevelDomain} <br />/ borders:{' '}
-                            {getBorders(country.borders)} <br />/ currencies:{' '}
-                            {getNestedData(country.currencies)} <br />/
-                            languages: {getNestedData(country.languages)}
-                        </li> */}
                     </div>
                 ))}
             </ul>

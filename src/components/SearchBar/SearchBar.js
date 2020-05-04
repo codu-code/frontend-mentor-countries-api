@@ -17,6 +17,7 @@ const SearchBar = props => {
                 theme={props.theme}
                 selectedItem={props.region}
                 onSelect={props.setRegion}
+                buttonTxt={props.buttonTxt}
             />
         </div>
     )

@@ -11,7 +11,7 @@ const SearchForm = props => {
                     type="text" 
                     name="search" 
                     value={props.searchTxt} 
-                    onChange={e => props.searchHandler(e)}
+                    onChange={e => props.searchHandler(e.target.value)}
                     placeholder="Search for a country..." 
                 />
             </form>
