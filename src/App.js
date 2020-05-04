@@ -12,19 +12,18 @@ const App = () => {
     const [theme, setTheme] = useState('light');
     const [countries, setCountries] = useState([]);
     const [region, setRegion] = useState('');
-    const [searchTxt, setSearchTxt] = useState('');
-    const buttonTxt = "Filter by Region";
+    const [searchText, setSearchText] = useState('');
     const [allCountries, setAllCountries] = useState([]);
 
     // Search Form Handler
     const searchHandler = val => {
-        setSearchTxt(val);
+        setSearchText(val);
     };
 
-    // Reset countries on searchTxt update
+    // Reset countries on searchText update
     useEffect(() => {
-        setCountries(searchByName(allCountries, searchTxt));
-    }, [allCountries, searchTxt]);
+        setCountries(searchByName(allCountries, searchText));
+    }, [allCountries, searchText]);
 
     // Regions for filter menu
     const regionList = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
@@ -54,9 +53,8 @@ const App = () => {
                         region={region}
                         setRegion={setRegion}
                         countries={countries}
-                        searchTxt={searchTxt}
+                        searchText={searchText}
                         searchHandler={searchHandler}
-                        buttonTxt={buttonTxt}
                     />
                 )}
             />
