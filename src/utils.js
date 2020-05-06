@@ -13,12 +13,15 @@ const getCountries = () =>{
     return axios.get(`https://restcountries.eu/rest/v2/all`);
 }
 
-// check if the user's search result is in the list of countries
+// filter countries only for search text by name
 const searchByName = (countries, search) => {
-    const countryNames = countries.map(country => country.name);
-    const found = countryNames.find(name => name === search);
-    return (found ? `found ${search}!` : `No results for ${search} found :(`);
-
+    if(search === "") {
+        return countries;
+    }
+    const newCountries = countries.filter(country => {
+        return country.name.includes(search);
+    });
+    return newCountries;
 }
 
 // get all borders for one country

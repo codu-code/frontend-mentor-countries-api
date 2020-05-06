@@ -29,9 +29,9 @@ const Dropdown = ({ buttonText, list, onSelect, selectedItem, theme }) => {
             <div className={styles.clickArea} onClick={toggleDropdown}>
                 <span>{buttonText}</span>
                 {isOpen ? (
-                    <i className="fas fa-angle-down" />
-                ) : (
                     <i className="fas fa-angle-up" />
+                ) : (
+                    <i className="fas fa-angle-down" />
                 )}
             </div>
             <ul className={isOpen ? styles.open : ''}>
