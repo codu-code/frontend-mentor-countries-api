@@ -12,9 +12,8 @@ const CountryGridPage = props => {
                 regionList={props.regionList}
                 region={props.region}
                 setRegion={props.setRegion}
-                searchTxt={props.searchTxt}
+                searchText={props.searchText}
                 searchHandler={props.searchHandler}
-                buttonTxt={props.buttonTxt}
             />
             <div className={styles.container}>
                 <CountryGrid 

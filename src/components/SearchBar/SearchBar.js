@@ -9,7 +9,7 @@ const SearchBar = props => {
         <div className={styles.SearchBar}>
             <SearchForm 
                 theme={props.theme}
-                searchTxt={props.searchTxt}
+                searchText={props.searchText}
                 searchHandler={props.searchHandler}
             />
             <Dropdown 
@@ -17,7 +17,7 @@ const SearchBar = props => {
                 theme={props.theme}
                 selectedItem={props.region}
                 onSelect={props.setRegion}
-                buttonTxt={props.buttonTxt}
+                buttonText="Filter by Region"
             />
         </div>
     )

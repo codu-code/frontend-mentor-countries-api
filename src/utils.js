@@ -15,12 +15,10 @@ const getCountries = () =>{
 
 // filter countries only for search text by name
 const searchByName = (countries, search) => {
-    let newCountries = null;
     if(search === "") {
-        newCountries = [...countries];
-        return newCountries;
+        return countries;
     }
-    newCountries = countries.filter(country => {
+    const newCountries = countries.filter(country => {
         return country.name.includes(search);
     });
     return newCountries;

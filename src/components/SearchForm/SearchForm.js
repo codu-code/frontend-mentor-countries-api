@@ -10,7 +10,7 @@ const SearchForm = props => {
                 <input 
                     type="text" 
                     name="search" 
-                    value={props.searchTxt} 
+                    value={props.searchText} 
                     onChange={e => props.searchHandler(e.target.value)}
                     placeholder="Search for a country..." 
                 />
