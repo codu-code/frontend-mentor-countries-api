@@ -1,0 +1,15 @@
+@import "../../global.styles.scss";
+
+.CountryGridPage {
+    background-color: $very-light-gray;
+    padding: 2em 0;
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+.dark {
+    background-color: $very-dark-blue;
+}

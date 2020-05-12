@@ -1,0 +1,38 @@
+@import "../../global.styles.scss";
+
+.SearchForm {
+    height: 3.5rem;
+    background-color: white;
+    box-shadow: $element-box-shadow-light;
+    border-radius: $border-radius;
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+    @include small-and-up {
+        display: inline-flex;
+        margin-bottom: 0;
+    }
+    i {
+        margin-left: 2em;
+    }
+    input {
+        padding: 0 2em;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.dark {
+    box-shadow: $element-box-shadow-dark;
+    background-color: $dark-blue;
+    color: white;
+    input {
+        background-color: $dark-blue;
+        color: white;
+        &::placeholder {
+            color: white;
+        }
+    }
+}
