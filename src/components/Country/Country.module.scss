@@ -6,29 +6,29 @@
     box-shadow: $element-box-shadow-light;
     overflow: hidden;
     cursor: pointer;
-}
-img {
-    width: 100%;
+    img {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.1rem;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 0.5rem;
+    }
+    li {
+        font-size: 0.9rem;
+        display: flex;
+    }
+    strong {
+        font-weight: $medium;
+    }
 }
 .infoBlock {
     padding: 1rem 1.5rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-h1 {
-    font-size: 1.1rem;
-}
-ul {
-    list-style-type: none;
-    margin-top: 0.5rem;
-}
-li {
-    font-size: 0.9rem;
-    display: flex;
-}
-strong {
-    font-weight: $medium;
 }
 .light {
     background-color: $white;
