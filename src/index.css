@@ -6,6 +6,14 @@
   max-width: 100%;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:visited{
+  color: inherit;
+}
+
 body {
   margin: 0;
   /* Global Font Family Set to Project Specified */

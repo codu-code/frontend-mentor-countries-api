@@ -1,6 +1,6 @@
 /*
     API Utility for fetching country data
-    
+
     - Using npm package 'axios' to make requesting data easier
     - You may need to run 'yarn install' or 'npm install'
     - methods other than getCountries may need to be modified for the final result
@@ -47,7 +47,7 @@ const getNestedData = (response) => {
     for (let i = 0; i < response.length; i++){
         formattedResponse += ` ${response[i].name}, `;
     }
-    return formattedResponse; 
+    return formattedResponse;
 }
 
 export default getCountries;
