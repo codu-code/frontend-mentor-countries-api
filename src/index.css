@@ -6,6 +6,10 @@
   max-width: 100%;
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   /* Global Font Family Set to Project Specified */
