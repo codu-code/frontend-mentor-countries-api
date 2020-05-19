@@ -5,7 +5,7 @@ import styles from './CountryDetailsPage.module.scss';
 
 const CountryDetailsPage = ({ match, history, countries, theme }) => {
     const country = countries.find(
-        country => country.alpha3Code === match.params.countryCode
+        country => country.alpha3Code === match.params.countryCode.toUpperCase()
     );
 
     const getCountryNameByCode = code => {
@@ -57,13 +57,13 @@ const CountryDetailsPage = ({ match, history, countries, theme }) => {
                                 <b>Currencies:</b>{' '}
                                 {country.currencies.map(
                                     currency => currency.name
-                                )}
+                                ).join(', ')}
                             </li>
                             <li>
                                 <b>Languages:</b>{' '}
                                 {country.languages.map(
-                                    language => `${language.name} `
-                                )}
+                                    language =>language.name
+                                ).join(', ')}
                             </li>
                         </ul>
                         {country.borders.length && (
