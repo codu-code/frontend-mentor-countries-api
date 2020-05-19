@@ -19,7 +19,7 @@ const searchByName = (countries, search) => {
         return countries;
     }
     const newCountries = countries.filter(country => {
-        return country.name.includes(search);
+        return country.name.toLowerCase().includes(search.toLowerCase());
     });
     return newCountries;
 }
