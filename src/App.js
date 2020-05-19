@@ -41,7 +41,7 @@ const App = () => {
     };
 
     return (
-        <div className="App">
+        <div className={theme === 'light' ? 'App light' : 'App dark'}>
             <Header theme={theme} toggleTheme={toggleTheme} />
             <Route
                 exact
@@ -63,21 +63,7 @@ const App = () => {
                 path="/:country"
                 component={() => <h1>Country details page should go HERE</h1>}
             />
-            {/* Added for demonstration purposes */}
-            {/* <h1>Search By Name</h1>
-            Searching for Spain: {searchByName(countries, 'Spain')}
-            <h1>Search By Name</h1>
-            Searching for foo: {searchByName(countries, 'foo')}
-            <h1>Countries</h1> */}
-            {/* <Dropdown
-                buttonText="Filter by Region"
-                list={[]}
-                selectedItem={region}
-                onSelect={setRegion}
-                theme={theme}
-            />
-            <h1>{region}</h1> */}
-            {/* Added for demonstration purposes END*/}
+            
         </div>
     );
 };
