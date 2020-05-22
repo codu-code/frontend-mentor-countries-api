@@ -1,74 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Route } from 'react-router-dom';
 
-import getCountries, { searchByName } from './utils';
 import Header from './components/Header/Header';
 import CountryGridPage from './components/CountryGridPage/CountryGridPage';
 import CountryDetailsPage from './pages/CountryDetailsPage/CountryDetailsPage.js';
 
+import { AppContext } from './App.provider.js';
+import { getCountries } from './utils';
+
 import './App.scss';
 
 const App = () => {
-    // Set theme to light by default
-    const [theme, setTheme] = useState('light');
-    const [countries, setCountries] = useState([]);
-    const [region, setRegion] = useState('');
-    const [searchText, setSearchText] = useState('');
-    const [allCountries, setAllCountries] = useState([]);
-
-    // Search Form Handler
-    const searchHandler = val => {
-        setSearchText(val);
-    };
-
-    // Reset countries on searchText update
-    useEffect(() => {
-        setCountries(searchByName(allCountries, searchText));
-    }, [allCountries, searchText]);
-
-    // Regions for filter menu
-    const regionList = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
+    const { theme, setCountries, setAllCountries } = useContext(AppContext);
 
     useEffect(() => {
-        getCountries().then(res => {
-            const countriesResponse = res.data;
-            setAllCountries(countriesResponse);
-            setCountries(countriesResponse);
+        getCountries().then(({ data }) => {
+            setAllCountries(data);
+            setCountries(data);
         });
-    }, []);
-
-    const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
-    };
+    }, [setCountries, setAllCountries]);
 
     return (
         <div className={`App ${theme === 'dark' ? 'dark' : ''}`}>
-            <Header theme={theme} toggleTheme={toggleTheme} />
-            <Route
-                exact
-                path="/"
-                render={() => (
-                    <CountryGridPage
-                        theme={theme}
-                        regionList={regionList}
-                        region={region}
-                        setRegion={setRegion}
-                        countries={countries}
-                        searchText={searchText}
-                        searchHandler={searchHandler}
-                    />
-                )}
-            />
-            <Route
-                exact
-                path="/:countryCode"
-                render={() => (
-                    <CountryDetailsPage
-                        countries={allCountries}
-                        theme={theme}
-                    />
-                )}
-            />
+            <Header />
+            <Route exact path="/" component={CountryGridPage} />
+            <Route exact path="/:countryCode" component={CountryDetailsPage} />
         </div>
     );
 };

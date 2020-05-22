@@ -1,16 +1,20 @@
-import React from "react";
+import React, {useContext} from "react";
 import {Link} from "react-router-dom"
 
-import styles from "./Header.module.scss";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
-const Header = props => (
-    <div className={`${styles.Fwc} ${props.theme === "light" ? styles.light : styles.dark}`}>
+import { AppContext } from "../../App.provider.js";
+import styles from "./Header.module.scss";
+
+const Header = () => {
+  const {theme, toggleTheme} = useContext(AppContext)
+  return (
+    <div className={`${styles.Fwc} ${theme === "light" ? styles.light : styles.dark}`}>
         <div className={styles.Header}>
             <p><Link to="/">Where in the world?</Link></p>
-            <ThemeSwitch theme={props.theme} toggleTheme={props.toggleTheme}/>
+            <ThemeSwitch theme={theme} toggleTheme={toggleTheme}/>
         </div>
     </div>
-);
+)};
 
 export default Header;

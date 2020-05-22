@@ -27,7 +27,7 @@ const Dropdown = ({ buttonText, list, onSelect, selectedItem, theme }) => {
             `}
         >
             <div className={styles.clickArea} onClick={toggleDropdown}>
-                <span>{buttonText}</span>
+                <span>{selectedItem || buttonText}</span>
                 {isOpen ? (
                     <i className="fas fa-angle-up" />
                 ) : (
@@ -35,6 +35,9 @@ const Dropdown = ({ buttonText, list, onSelect, selectedItem, theme }) => {
                 )}
             </div>
             <ul className={isOpen ? styles.open : ''}>
+                {(selectedItem && <li onClick={() => handleSelect('')}>
+                    {buttonText}
+                </li>)}
                 {list.map(item => (
                     <li
                         key={item}

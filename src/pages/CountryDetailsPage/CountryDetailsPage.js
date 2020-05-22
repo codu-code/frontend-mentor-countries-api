@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
+import { AppContext } from '../../App.provider.js';
 import styles from './CountryDetailsPage.module.scss';
 
-const CountryDetailsPage = ({ match, history, countries, theme }) => {
-    const country = countries.find(
-        country => country.alpha3Code === match.params.countryCode.toUpperCase()
-    );
+const CountryDetailsPage = ({ match, history, countries }) => {
+    const { getCountry, getCountryNameByCode, theme } = useContext(AppContext);
+    const [country, setCountry] = useState(null);
 
-    const getCountryNameByCode = code => {
-        const country = countries.find(country => country.alpha3Code === code);
-        const name = country ? country.name : code;
-        return name;
-    };
+    useEffect(() => {
+        setCountry(getCountry(match.params.countryCode.toUpperCase()));
+    }, [match.params.countryCode, getCountry]);
 
+    useEffect(() => {
+        console.log({ country });
+    });
     return (
         (country && (
             <div
@@ -55,18 +56,18 @@ const CountryDetailsPage = ({ match, history, countries, theme }) => {
                             </li>
                             <li>
                                 <b>Currencies:</b>{' '}
-                                {country.currencies.map(
-                                    currency => currency.name
-                                ).join(', ')}
+                                {country.currencies
+                                    .map(currency => currency.name)
+                                    .join(', ')}
                             </li>
                             <li>
                                 <b>Languages:</b>{' '}
-                                {country.languages.map(
-                                    language =>language.name
-                                ).join(', ')}
+                                {country.languages
+                                    .map(language => language.name)
+                                    .join(', ')}
                             </li>
                         </ul>
-                        {country.borders.length && (
+                        {country.borders.length > 0 && (
                             <div className={styles.borderCountries}>
                                 <h2>Border Countries:</h2>
                                 <div className={styles.borderCountriesList}>

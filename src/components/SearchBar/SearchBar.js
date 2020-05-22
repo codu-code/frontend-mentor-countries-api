@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Dropdown from "../Dropdown/Dropdown";
 import SearchForm from "../SearchForm/SearchForm";
+import { AppContext } from "../../App.provider.js";
+
 import styles from "./SearchBar.module.scss";
 
-const SearchBar = props => {
+const SearchBar = () => {
+    const {theme, regionList, searchText, setSearchText, region, setRegion} = useContext(AppContext);
     return (
         <div className={styles.SearchBar}>
-            <SearchForm 
-                theme={props.theme}
-                searchText={props.searchText}
-                searchHandler={props.searchHandler}
+            <SearchForm
+                theme={theme}
+                searchText={searchText}
+                searchHandler={setSearchText}
             />
-            <Dropdown 
-                list={props.regionList}
-                theme={props.theme}
-                selectedItem={props.region}
-                onSelect={props.setRegion}
+            <Dropdown
+                list={regionList}
+                theme={theme}
+                selectedItem={region}
+                onSelect={setRegion}
                 buttonText="Filter by Region"
             />
         </div>

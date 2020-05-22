@@ -1,25 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import styles from "./CountryGridPage.module.scss";
 import SearchBar from "../SearchBar/SearchBar";
 import CountryGrid from '../CountryGrid/CountryGrid';
+import {AppContext} from '../../App.provider.js';
 
-const CountryGridPage = props => {
+const CountryGridPage = () => {
+    const { theme } = useContext( AppContext );
     return (
-        <div className={`${styles.CountryGridPage} ${props.theme === "dark" ? styles.dark : null}`}>
-            <SearchBar 
-                theme={props.theme}
-                regionList={props.regionList}
-                region={props.region}
-                setRegion={props.setRegion}
-                searchText={props.searchText}
-                searchHandler={props.searchHandler}
-            />
+        <div className={`${styles.CountryGridPage} ${theme === "dark" ? styles.dark : null}`}>
+            <SearchBar />
             <div className={styles.container}>
-                <CountryGrid 
-                    countries={props.countries}
-                    theme={props.theme}
-                />
+                <CountryGrid />
             </div>
         </div>
     )
