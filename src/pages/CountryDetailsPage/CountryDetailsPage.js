@@ -12,9 +12,6 @@ const CountryDetailsPage = ({ match, history, countries }) => {
         setCountry(getCountry(match.params.countryCode.toUpperCase()));
     }, [match.params.countryCode, getCountry]);
 
-    useEffect(() => {
-        console.log({ country });
-    });
     return (
         (country && (
             <div
