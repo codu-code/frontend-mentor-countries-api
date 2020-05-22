@@ -7,12 +7,12 @@ const SearchForm = props => {
         <div className={`${styles.SearchForm} ${props.theme === "dark" ? styles.dark : null}`}>
             <form>
                 <i className="fas fa-search"></i>
-                <input 
-                    type="text" 
-                    name="search" 
-                    value={props.searchText} 
+                <input
+                    type="text"
+                    name="search"
+                    value={props.searchText}
                     onChange={e => props.searchHandler(e.target.value)}
-                    placeholder="Search for a country..." 
+                    placeholder="Search for a country..."
                 />
             </form>
         </div>
