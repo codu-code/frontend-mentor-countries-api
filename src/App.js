@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
-import CountryGridPage from './components/CountryGridPage/CountryGridPage';
+import CountryGridPage from './pages/CountryGridPage/CountryGridPage';
 import CountryDetailsPage from './pages/CountryDetailsPage/CountryDetailsPage.js';
 
 import { AppContext } from './App.provider.js';
