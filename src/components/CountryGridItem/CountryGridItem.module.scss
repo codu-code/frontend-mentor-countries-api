@@ -4,7 +4,6 @@
     display: grid;
     border-radius: $border-radius;
     box-shadow: $element-box-shadow-light;
-    overflow: hidden;
     cursor: pointer;
     img {
         width: 100%;
@@ -23,13 +22,11 @@
     strong {
         font-weight: $medium;
     }
+    .infoBlock {
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
 }
-.infoBlock {
-    padding: 1rem 1.5rem 1.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+
 .light {
     background-color: $white;
     color: $very-dark-blue-text;
