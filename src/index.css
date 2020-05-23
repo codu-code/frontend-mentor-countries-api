@@ -1,28 +1,28 @@
 /* css reset */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  max-width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
+a {
+    text-decoration: none;
+    color: inherit;
 }
-a:visited{
-  color: inherit;
+a:visited {
+    color: inherit;
 }
 
 body {
-  margin: 0;
-  /* Global Font Family Set to Project Specified */
-  font-family: 'Nunito Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    /* Global Font Family Set to Project Specified */
+    font-family: 'Nunito Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }
