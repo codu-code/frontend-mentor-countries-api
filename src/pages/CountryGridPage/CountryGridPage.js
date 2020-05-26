@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 
-import styles from "./CountryGridPage.module.scss";
-import SearchBar from "../SearchBar/SearchBar";
-import CountryGrid from '../CountryGrid/CountryGrid';
-import {AppContext} from '../../App.provider.js';
+import styles from './CountryGridPage.module.scss';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import CountryGrid from '../../components/CountryGrid/CountryGrid';
+import { AppContext } from '../../App.provider.js';
 
 const CountryGridPage = () => {
     const { theme } = useContext( AppContext );

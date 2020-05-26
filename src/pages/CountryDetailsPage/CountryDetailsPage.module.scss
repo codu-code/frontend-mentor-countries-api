@@ -1,7 +1,6 @@
 @import '../../global.styles.scss';
 
 .CountryDetailsPage {
-    background-position: 0 -80px;
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -104,7 +103,6 @@
     }
 }
 
-
 @include small-and-up {
     .CountryDetailsPage {
         h1 {
@@ -138,7 +136,7 @@
         }
         .borderCountries {
             grid-column: 2/33;
-            margin-top:2rem;
+            margin-top: 2rem;
             .borderCountriesList {
                 margin-top: 0;
                 display: inline;

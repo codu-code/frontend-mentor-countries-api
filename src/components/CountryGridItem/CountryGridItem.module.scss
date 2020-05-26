@@ -1,0 +1,39 @@
+@import '../../global.styles.scss';
+
+.Country {
+    display: grid;
+    border-radius: $border-radius;
+    box-shadow: $element-box-shadow-light;
+    cursor: pointer;
+    img {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.1rem;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 0.5rem;
+    }
+    li {
+        font-size: 0.9rem;
+        display: flex;
+    }
+    strong {
+        font-weight: $medium;
+    }
+    .infoBlock {
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+
+.light {
+    background-color: $white;
+    color: $very-dark-blue-text;
+}
+
+.dark {
+    background-color: $dark-blue;
+    color: $white;
+    box-shadow: $element-box-shadow-dark;
+}
